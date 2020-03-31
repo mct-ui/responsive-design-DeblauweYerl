@@ -199,6 +199,11 @@ a:focus {
         padding-right: 48px;
     }
 
+    .o-row--md {
+        padding-top: 48px;
+        padding-bottom: 24px;
+    }
+
     .o-row--lg {
         padding-top: 72px;
         padding-bottom: 48px;
@@ -231,6 +236,7 @@ a:focus {
     display: -ms-flexbox;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
     .o-layout__item {
@@ -335,6 +341,46 @@ a:focus {
     align-content: space-between;
 }
 
+/*
+    Objects: List
+    ---
+    Small reusable object to remove default list styling from lists
+*/
+
+.o-list {
+    list-style: none;
+    padding: 0;
+}
+
+/*
+    Objects: section
+    ---
+    Creates vertical whitespace between adjacent sections inside a row
+*/
+
+.o-section {
+    display: flow-root;
+}
+
+.o-section + .o-section {
+    margin-top: 24px;
+}
+
+@media (min-width: 768px) {
+    .o-section--lg + .o-section--lg,
+    .o-section--xl + .o-section--xl {
+        margin-top: 48px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .o-section--xl + .o-section--xl {
+        margin-top: 72px;
+    }
+}
+
+
+
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
@@ -356,6 +402,92 @@ a:focus {
 @media (min-width: 768px) {
     .c-logo__symbol {
         height: 40px
+    }
+}
+
+@media (min-width: 992px) {
+    .c-logo {
+        margin-bottom: 8px;
+    }
+}
+
+/*
+    Component: Nav
+    ---
+    Main navigation of the site
+*/
+
+.c-nav {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.c-nav--meta {
+    font-size: 16px;
+}
+
+.c-nav__link {
+    text-decoration: none;
+    font-weight: 400;
+    padding: 8px 0;
+    display: inline;
+}
+
+.c-nav__link,
+.c-nav__link:visited,
+.c-nav__link:active {
+    color: #202024;
+}
+
+.c-nav__link--meta,
+.c-nav__link--meta:visited,
+.c-nav__link--meta:active {
+    color: #6C6C75;
+}
+
+.is-selected .c-nav__link,
+.c-nav__link:hover,
+.c-nav__link:focus {
+    color: #5051db
+}
+
+@media (min-width: 768px) {
+    .c-nav__list {
+        display: flex;
+        margin-bottom: 0;
+    }
+
+    .c-nav__link {
+        padding: 8px 16px 8px 0px;
+    }
+}
+
+@media (min-width: 992px) {
+    .c-nav__list {
+        margin-bottom: 0;
+    }
+}
+
+/*
+    Component: header
+    ---
+    Main header of the website
+*/
+
+.c-header__nav {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .c-header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 24px
+    }
+
+    .c-header__nav {
+        display: block;
     }
 }
 
@@ -612,6 +744,16 @@ a:focus {
 
 .u-color-primary-dark {
     color: #3E3EA8
+}
+
+/*
+    Utilities: spacing
+    ---
+    Utility classes to put specific margins and paddings onto elements
+*/
+
+.u-pt-clear {
+    padding-top: 0 !important;
 }
 
 
