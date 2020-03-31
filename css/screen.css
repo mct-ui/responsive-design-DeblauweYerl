@@ -75,6 +75,7 @@ html {
 img {
     max-width: 100%;
     vertical-align: top;
+    justify-self: center;
 }
 
 /*
@@ -220,7 +221,7 @@ a:focus {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    max-width: 70.5em; /* 90 * 16px = 1440px */
+    max-width: 65em; /* 90 * 16px = 1440px */
 }
 
 /*
@@ -857,6 +858,7 @@ a:focus {
     img {
         page-break-inside: avoid;
     }
+
     p,
     h2,
     h3 {
