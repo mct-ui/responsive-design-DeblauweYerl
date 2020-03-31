@@ -481,7 +481,7 @@ a:focus {
 @media (min-width: 992px) {
     .c-header {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         margin-bottom: 24px
     }
